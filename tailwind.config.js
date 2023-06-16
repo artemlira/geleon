@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./**/*.html'],
+  content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
       fontFamily: {
-        montserrat: "'Montserrat', sans-serif",
-        zona: "'Zona Pro', sans-serif",
+        montserrat: ['Montserrat', 'sans-serif'],
+        zona: ['Zona Pro', 'sans-serif'],
       },
       colors: {
         black: '#000000',
@@ -14,6 +14,15 @@ module.exports = {
         darkGray: '#404040',
         yellow: '#F9C000',
         white: '#ffffff',
+      },
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+        '3xl': '1536px',
+        '4xl': '1664px',
       },
     },
   },
