@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/src/assets/logo.svg" />
     <link rel="stylesheet" href="./css/output.css" />
     <title>Geleon</title>
   </head>
   <body class="font-montserrat font-medium">
-    <!-- header ========================================================================================-->
+    <!-- header ====================================================================================-->
     <header
       class="mx-auto flex min-h-[46px] items-center justify-between gap-4 px-4 py-2 lg:min-h-[138px] 4xl:max-w-[1842px]"
     >
-      <!-- logo =================================================================================================-->
+      <!-- logo ====================================================================================-->
       <div
         class="absolute z-10 hidden h-[80px] w-[100px] sm:relative sm:block xl:h-[108px] xl:w-[132px]"
       >
@@ -131,7 +132,7 @@
         </svg>
       </div>
 
-      <!-- menu PC ========================================================================================== -->
+      <!-- menu PC ================================================================================= -->
       <nav class="hidden lg:block">
         <ul
           class="hidden flex-wrap justify-center space-x-4 lg:flex xl:flex-nowrap 2xl:space-x-8 3xl:space-x-12 4xl:space-x-[71px]"
@@ -146,14 +147,14 @@
           <li>
             <a
               class="cursor-pointer text-base hover:text-lightBlue md:text-lg xl:text-xl 2xl:text-[23px]"
-              href="#"
+              href="#products"
               >Товары</a
             >
           </li>
           <li>
             <a
               class="cursor-pointer text-base hover:text-lightBlue md:text-lg xl:text-xl 2xl:text-[23px]"
-              href="#"
+              href="#call_us"
               >Позвоните нам</a
             >
           </li>
@@ -181,7 +182,7 @@
         </ul>
       </nav>
 
-      <!-- menu mobile ==================================================================================== -->
+      <!-- menu mobile ============================================================================= -->
       <nav
         id="mobile-menu"
         class="fixed left-0 top-0 hidden h-auto w-full animate-fadeIn border-2 bg-white pt-10 transition-transform lg:pt-[138px]"
@@ -191,10 +192,10 @@
             <a class="hover:text-lightBlue" href="#guarantees">Преимущества</a>
           </li>
           <li>
-            <a class="hover:text-lightBlue" href="#">Товары</a>
+            <a class="hover:text-lightBlue" href="#products">Товары</a>
           </li>
           <li>
-            <a class="hover:text-lightBlue" href="#">Позвоните нам</a>
+            <a class="hover:text-lightBlue" href="#call_us">Позвоните нам</a>
           </li>
           <li>
             <a class="hover:text-lightBlue" href="#">Схема работы</a>
@@ -208,7 +209,7 @@
         </ul>
       </nav>
 
-      <!-- phone ========================================================================================== -->
+      <!-- phone =================================================================================== -->
       <div class="m-0 shrink-0 md:w-[175px] xl:w-auto">
         <a
           href="tel:+380996811324"
@@ -269,7 +270,7 @@
         </a>
       </div>
 
-      <!-- burger menu ================================================================================= -->
+      <!-- burger menu ============================================================================= -->
       <div id="burger" class="group relative h-[44px] w-[44px] cursor-pointer lg:hidden">
         <span
           class="absolute left-0 top-0 block h-2 w-full rounded-lg bg-black transition-transform group-[.active]:translate-y-[15px] group-[.active]:rotate-45"
@@ -285,7 +286,7 @@
 
     <!-- main ====================================================================================== -->
     <main class="mx-auto px-4 4xl:max-w-[1842px]">
-      <!--section hero ================================================================================= -->
+      <!--section hero ============================================================================= -->
       <section
         class="bg-[#555555] bg-[url('../assets/heroBG.jpg')] bg-cover bg-center bg-no-repeat px-2 py-[55px] bg-blend-multiply lg:px-10 lg:py-[100px] 2xl:px-[96px] 2xl:py-[296px]"
       >
@@ -300,11 +301,12 @@
           Подберем от латки до комплекта "на первый раз" за <span class="font-bold">1 звонок!</span>
         </p>
         <div class="flex items-center">
-          <button
-            class="mr-0 block w-full rounded-[10px] bg-yellow px-[60px] py-4 font-montserrat text-[20px] font-bold leading-6 transition-all ease-in hover:bg-white sm:mr-6 sm:w-auto lg:mr-[43px] lg:px-16 lg:py-5 lg:font-zona lg:leading-[36px] lg:text-[28] 2xl:px-[106px] 2xl:pb-[32px] 2xl:pt-[26px] 2xl:text-[35px] 2xl:leading-[42px]"
+          <a
+            href="#call_us"
+            class="mr-0 block w-full cursor-pointer rounded-[10px] bg-yellow px-[60px] py-4 font-montserrat text-[20px] font-bold leading-6 transition-all ease-in hover:bg-white sm:mr-6 sm:w-auto lg:mr-[43px] lg:px-16 lg:py-5 lg:font-zona lg:leading-[36px] lg:text-[28] 2xl:px-[106px] 2xl:pb-[32px] 2xl:pt-[26px] 2xl:text-[35px] 2xl:leading-[42px]"
           >
             Заказать звонок
-          </button>
+          </a>
           <a
             class="mr-[33px] hidden sm:inline-block sm:h-12 sm:w-12 lg:h-20 lg:w-20 2xl:h-[102px] 2xl:w-[102px]"
             href="https://t.me/Geleon777bot"
@@ -404,7 +406,7 @@
         </div>
       </section>
 
-      <!-- section guarantees ======================================================================== -->
+      <!-- section guarantees ====================================================================== -->
       <section
         id="guarantees"
         class="pb-[32px] pt-[22px] lg:px-10 lg:pb-[70px] lg:pt-[80px] 2xl:px-[96px] 2xl:pb-[117px] 2xl:pt-[128px]"
@@ -610,9 +612,304 @@
           </div>
         </div>
       </section>
+
+      <!-- section Call us ========================================================================= -->
+      <section
+        id="call_us"
+        class="relative flex lg:min-h-[1089px] lg:px-[50px] lg:pb-[50] lg:pt-[30px] 2xl:px-[100px] 2xl:pb-[104px] 2xl:pt-[70px]"
+      >
+        <!-- background image ======================================================================-->
+        <div
+          class="hidden w-3/5 bg-[#555555] bg-[url('../assets/image2.jpg')] bg-cover bg-center bg-no-repeat bg-blend-hard-light lg:block"
+        ></div>
+
+        <!-- background grey =======================================================================-->
+        <div class="mb-[81px] mt-[96px] hidden w-2/5 bg-[#F0F0F0] lg:block"></div>
+
+        <!-- form ==================================================================================-->
+        <form
+          action="/"
+          class="mx-auto w-full bg-[#2B2F2F] px-[16px] py-[25px] md:h-[573px] md:w-[750px] lg:absolute lg:left-[60%] lg:top-1/2 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:pb-[108px] lg:pl-[104px] lg:pr-[64px] lg:pt-[100px]"
+        >
+          <!-- form title ============================================================================ -->
+          <h3
+            class="mb-[23px] font-zona text-[22px] font-bold leading-[26px] text-yellow md:mb-[28px] md:text-[37px] md:leading-[44px]"
+          >
+            Напишите нам!
+          </h3>
+
+          <!-- form text =========================================================================== -->
+          <p class="mb-6 leading-5 text-white md:mb-[44px] md:text-xl">
+            Квалифицированный менеджер нашей компании свяжется с вами и решит любой вопрос по
+            оснащению шиномонтажа.
+          </p>
+
+          <!-- form inputs========================================================================== -->
+          <div class="flex flex-col gap-5">
+            <input
+              class="border-b-[1px] border-white bg-transparent py-1 text-white placeholder:text-white focus:outline-none"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ваше имя"
+            />
+
+            <input
+              class="border-b-[1px] border-white bg-transparent py-1 text-white placeholder:text-white"
+              type="phone"
+              name="phone"
+              id="phone"
+              placeholder="Телефон"
+            />
+          </div>
+
+          <!-- form button ========================================================================= -->
+          <button
+            class="mt-[33px] w-full rounded-[10px] bg-yellow py-4 text-[20px] font-bold leading-[24px] transition-all ease-in hover:bg-white md:mt-11 md:w-auto md:px-[65px]"
+            type="submit"
+          >
+            Напишите нам
+          </button>
+        </form>
+      </section>
+
+      <!-- section Products ======================================================================== -->
+      <section
+        id="products"
+        class="pb-[19px] pt-[35px] lg:px-[66px] lg:pb-[89px] lg:pt-[74px] 2xl:px-[100px]"
+      >
+        <!-- products title ======================================================================== -->
+        <h3
+          class="mb-[19px] font-zona text-[22px] uppercase leading-[26px] lg:max-w-[1300px] lg:text-[50px] lg:leading-[73px] 2xl:text-[70px] 2xl:leading-[83px]"
+        >
+          ВЫБЕРИТЕ <span class="font-bold">мАТЕРИАЛЫ</span> ДЛЯ ШИНОМОНТАЖА
+        </h3>
+
+        <!-- products ============================================================================== -->
+        <div class="flex flex-col gap-y-9">
+          <!-- products item 1====================================================================== -->
+          <div
+            class="flex w-full flex-col items-center gap-10 bg-[#F0F0F0] px-[57px] py-[32px] md:flex-row lg:gap-[70px] xl:gap-[177px]"
+          >
+            <!-- product image ===================================================================== -->
+            <div
+              class="lg:h[300px] lg:[289px] h-[241px] w-[248px] shrink-0 xl:h-[396px] xl:w-[385px]"
+            >
+              <img
+                class="h-auto w-full object-cover object-center"
+                src="./assets/material1.jpg"
+                alt="material1"
+              />
+            </div>
+
+            <!-- product description =============================================================== -->
+            <div>
+              <h4
+                class="font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ОБОРУДОВАНИЕ
+              </h4>
+              <p
+                class="mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ДЛЯ ШИНОМОНТАЖА
+              </p>
+              <ul class="list-disc font-zona leading-[18px] lg:text-[25px] lg:leading-[30px]">
+                <li class="ml-3">Балансировочные стенды</li>
+                <li class="ml-3">Вулканизаторы, подъемное</li>
+                <li class="ml-3">Шиномонтажные станки</li>
+                <li class="ml-3">Стоимость от ...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- products item 2====================================================================== -->
+          <div
+            class="flex w-full flex-col items-center gap-10 bg-[#F0F0F0] px-[57px] py-[32px] md:flex-row lg:gap-[70px] xl:gap-[177px]"
+          >
+            <!-- product image ===================================================================== -->
+            <div
+              class="lg:h[300px] lg:[289px] h-[241px] w-[248px] shrink-0 xl:h-[396px] xl:w-[385px]"
+            >
+              <img
+                class="h-auto w-full object-cover object-center"
+                src="./assets/latki1.jpg"
+                alt="latki1"
+              />
+            </div>
+
+            <!-- product description =============================================================== -->
+            <div>
+              <h4
+                class="font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ЛАТКИ И ПЛАСТЫРИ
+              </h4>
+              <p
+                class="mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ДЛЯ РЕМОНТА КАМЕР И ШИН
+              </p>
+              <ul class="list-disc font-zona leading-[18px] lg:text-[25px] lg:leading-[30px]">
+                <li class="ml-3">Латки камерные, универсальные (все размеры)</li>
+                <li class="ml-3">Пластыри радиальные, диагональные (все размеры)</li>
+                <li class="ml-3">Rossvik, BestPatch, Tip Top, Maruni, TECH и др.</li>
+                <li class="ml-3">Стоимость от ...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- products item 3====================================================================== -->
+          <div
+            class="flex w-full flex-col items-center gap-10 bg-[#F0F0F0] px-[57px] py-[32px] md:flex-row lg:gap-[70px] xl:gap-[177px]"
+          >
+            <!-- product image ===================================================================== -->
+            <div
+              class="lg:h[300px] lg:[289px] h-[241px] w-[248px] shrink-0 xl:h-[396px] xl:w-[385px]"
+            >
+              <img
+                class="h-auto w-full object-cover object-center"
+                src="./assets/ventili1.jpg"
+                alt="ventili1"
+              />
+            </div>
+
+            <!-- product description =============================================================== -->
+            <div>
+              <h4
+                class="font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ВЕНТИЛИ, ЗОЛОТНИКИ, УДЛЕНИТЕЛИ
+              </h4>
+              <p
+                class="mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ПО ЛУЧШЕЙ ЦЕНЕ
+              </p>
+              <ul class="list-disc font-zona leading-[18px] lg:text-[25px] lg:leading-[30px]">
+                <li class="ml-3">Бескамерные для легковых и грузовых</li>
+                <li class="ml-3">Камерные для легковых и грузовых</li>
+                <li class="ml-3">Грибки, колышки, шнуры, якоря</li>
+                <li class="ml-3">Rossvik, BestPatch, Украина, Китай</li>
+                <li class="ml-3">Стоимость от ...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- products item 4====================================================================== -->
+          <div
+            class="flex w-full flex-col items-center gap-10 bg-[#F0F0F0] px-[57px] py-[32px] md:flex-row lg:gap-[70px] xl:gap-[177px]"
+          >
+            <!-- product image ===================================================================== -->
+            <div
+              class="lg:h[300px] lg:[289px] h-[241px] w-[248px] shrink-0 xl:h-[396px] xl:w-[385px]"
+            >
+              <img
+                class="h-auto w-full object-cover object-center"
+                src="./assets/gerina.png"
+                alt="gerina"
+              />
+            </div>
+
+            <!-- product description =============================================================== -->
+            <div>
+              <h4
+                class="font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-[35px] lg:leading-[42px]"
+              >
+                СЫРАЯ РЕЗИНА
+              </h4>
+              <p
+                class="mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ДЛЯ ВУЛКАНИЗАЦИИ
+              </p>
+              <ul class="list-disc font-zona leading-[18px] lg:text-[25px] lg:leading-[30px]">
+                <li class="ml-3">Rossvik, Oxi, Tip Top, Украина</li>
+                <li class="ml-3">Толщина: до 1 мм, 1-2,5 мм, от 3 мм</li>
+                <li class="ml-3">Любых размеров</li>
+                <li class="ml-3">Стоимость от ...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- products item 5====================================================================== -->
+          <div
+            class="flex w-full flex-col items-center gap-10 bg-[#F0F0F0] px-[57px] py-[32px] md:flex-row lg:gap-[70px] xl:gap-[177px]"
+          >
+            <!-- product image ===================================================================== -->
+            <div
+              class="lg:h[300px] lg:[289px] h-[241px] w-[248px] shrink-0 xl:h-[396px] xl:w-[385px]"
+            >
+              <img
+                class="h-auto w-full object-cover object-center"
+                src="./assets/gruza.jpg"
+                alt="gruza"
+              />
+            </div>
+
+            <!-- product description =============================================================== -->
+            <div>
+              <h4
+                class="font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ГРУЗА БАЛАНСИРОВОЧНЫЕ
+              </h4>
+              <p
+                class="mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ВСЕХ РАЗМЕРОВ В НАЛИЧИИ
+              </p>
+              <ul class="list-disc font-zona leading-[18px] lg:text-[25px] lg:leading-[30px]">
+                <li class="ml-3">Клеящийся (самоклейка,адгезивный)</li>
+                <li class="ml-3">Набивные для стальных дисков</li>
+                <li class="ml-3">Набивные для легкосплавных дисков</li>
+                <li class="ml-3">Украина, Италия, Бельгия, Германия, Китай</li>
+                <li class="ml-3">Стоимость от ...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- products item 6====================================================================== -->
+          <div
+            class="flex w-full flex-col items-center gap-10 bg-[#F0F0F0] px-[57px] py-[32px] md:flex-row lg:gap-[70px] xl:gap-[177px]"
+          >
+            <!-- product image ===================================================================== -->
+            <div
+              class="lg:h[300px] lg:[289px] h-[241px] w-[248px] shrink-0 xl:h-[396px] xl:w-[385px]"
+            >
+              <img
+                class="h-auto w-full object-cover object-center"
+                src="./assets/himiya.jpg"
+                alt="himiya"
+              />
+            </div>
+
+            <!-- product description =============================================================== -->
+            <div>
+              <h4
+                class="font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ХИМИЯ, ЖИДКОСТИ, ПАСТЫ
+              </h4>
+              <p
+                class="mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-[35px] lg:leading-[42px]"
+              >
+                ДЛЯ ШИНОМОНТАЖА В НАЛИЧИИ
+              </p>
+              <ul class="list-disc font-zona leading-[18px] lg:text-[25px] lg:leading-[30px]">
+                <li class="ml-3">Герметики борта, термоклеи, пасты</li>
+                <li class="ml-3">Клея камерные, клея универсальные</li>
+                <li class="ml-3">Клей-цемент, очистители, отвердители</li>
+                <li class="ml-3">Rossvik, Tip Top, Maruni, TECH, BestPatch и др.</li>
+                <li class="ml-3">Стоимость от ...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- footer ===================================================================================== -->
+    <!-- footer ==================================================================================== -->
     <footer class="mx-auto px-4 4xl:max-w-[1842px]">footer</footer>
     <script src="./js/main.js"></script>
   </body>
