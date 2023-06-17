@@ -7,6 +7,9 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
         zona: ['Zona Pro', 'sans-serif'],
       },
+      backgroundImage: {
+        heroBG: "url('./public/assets/heroBG.jpg') no-repeat center /cover",
+      },
       colors: {
         black: '#000000',
         darkBlue: '#050038',

@@ -13,7 +13,7 @@
     >
       <!-- logo =================================================================================================-->
       <div
-        class="absolute hidden h-[80px] w-[100px] sm:relative sm:block xl:h-[108px] xl:w-[132px]"
+        class="absolute z-10 hidden h-[80px] w-[100px] sm:relative sm:block xl:h-[108px] xl:w-[132px]"
       >
         <svg
           class="h-full w-full object-cover"
@@ -184,7 +184,7 @@
       <!-- menu mobile ==================================================================================== -->
       <nav
         id="mobile-menu"
-        class="fixed left-0 top-0 hidden h-auto w-full border-2 bg-white transition-transform"
+        class="fixed left-0 top-0 hidden h-auto w-full border-2 bg-white pt-10 transition-transform lg:pt-[138px]"
       >
         <ul class="flex flex-col items-center justify-center gap-[15px] py-[15px]">
           <li>
@@ -219,7 +219,11 @@
 
       <!-- mobile icons contacts =================================================================== -->
       <div class="flex space-x-[11px] sm:hidden">
-        <div class="h-8 w-8 cursor-pointer rounded-full transition-transform hover:scale-125">
+        <a
+          href="https://t.me/Geleon777bot"
+          target="_blank"
+          class="h-8 w-8 cursor-pointer rounded-full transition-transform hover:scale-125"
+        >
           <svg
             class="h-full w-full object-cover"
             viewBox="0 0 32 32"
@@ -244,8 +248,12 @@
               </clipPath>
             </defs>
           </svg>
-        </div>
-        <div class="h-8 w-8 cursor-pointer rounded-full transition-transform hover:scale-125">
+        </a>
+        <a
+          href="viber://pa?chatURI=geleonc"
+          target="_blank"
+          class="h-8 w-8 cursor-pointer rounded-full transition-transform hover:scale-125"
+        >
           <svg
             class="h-full w-full object-cover"
             viewBox="0 0 32 32"
@@ -258,7 +266,7 @@
               fill="white"
             />
           </svg>
-        </div>
+        </a>
       </div>
 
       <!-- burger menu ================================================================================= -->
@@ -274,6 +282,83 @@
         ></span>
       </div>
     </header>
+
+    <!-- main ====================================================================================== -->
+    <main class="mx-auto px-4 4xl:max-w-[1842px]">
+      <!--section hero ================================================================================= -->
+      <section
+        class="bg-[#555555] bg-[url('../assets/heroBG.jpg')] bg-cover bg-center bg-no-repeat px-2 py-[55px] bg-blend-multiply lg:px-10 lg:py-[100px] 2xl:px-[96px] 2xl:py-[296px]"
+      >
+        <h1
+          class="mb-[15px] max-w-[964px] font-zona text-[22px] font-bold uppercase leading-[26px] text-white sm:mb-[50px] lg:text-[50px] lg:leading-[62px] 2xl:text-[70px] 2xl:leading-[83px]"
+        >
+          РАСХОДНЫЕ МАТЕРИАЛЫ ДЛЯ ШИНОМОНТАЖА
+        </h1>
+        <p
+          class="mb-[19px] text-base font-medium leading-5 text-white sm:mb-[50px] lg:text-2xl lg:leading-[32px] 2xl:text-[35px] 2xl:leading-[43px]"
+        >
+          Подберем от латки до комплекта "на первый раз" за <span class="font-bold">1 звонок!</span>
+        </p>
+        <div class="flex items-center">
+          <button
+            class="mr-0 block w-full rounded-[10px] bg-yellow px-[60px] py-4 font-montserrat text-[20px] font-bold leading-6 transition-all ease-in hover:bg-white sm:mr-6 sm:w-auto lg:mr-[43px] lg:px-16 lg:py-5 lg:font-zona lg:leading-[36px] lg:text-[28] 2xl:px-[106px] 2xl:pb-[32px] 2xl:pt-[26px] 2xl:text-[35px] 2xl:leading-[42px]"
+          >
+            Заказать звонок
+          </button>
+          <a
+            class="mr-[33px] hidden sm:inline-block sm:h-12 sm:w-12 lg:h-20 lg:w-20 2xl:h-[102px] 2xl:w-[102px]"
+            href="https://t.me/Geleon777bot"
+            target="_blank"
+          >
+            <svg
+              class="h-full w-full object-cover"
+              viewBox="0 0 102 102"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="51" cy="51" r="51" fill="#0093D9" />
+              <g clip-path="url(#clip0_0_282)">
+                <path
+                  d="M17.874 47.347C37.4 38.8557 62.6805 28.5173 66.1444 27.1112C75.3068 23.3618 78.1003 24.0786 76.7035 32.3769C75.6979 38.3319 72.7928 58.0714 70.4742 70.3397C69.1054 77.618 66.0327 78.5002 61.1721 75.3297C58.8535 73.8134 47.0932 66.1492 44.5512 64.3572C42.2327 62.7306 39.0202 60.7456 43.0427 56.8584C44.4674 55.4799 53.8533 46.6302 61.1721 39.7379C62.1219 38.8281 60.9207 37.3394 59.8312 38.0838C49.9704 44.5349 36.3106 53.4949 34.5507 54.6528C31.9249 56.4173 29.3829 57.2168 24.8575 55.9486C21.4216 54.9837 18.0974 53.8258 16.7845 53.3847C11.7564 51.6754 12.9575 49.4974 17.8181 47.3746L17.874 47.347Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_0_282">
+                  <rect
+                    width="63.4667"
+                    height="52.1333"
+                    fill="white"
+                    transform="translate(13.6 24.9331)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a
+            class="mr-[33px] hidden sm:inline-block sm:h-12 sm:w-12 lg:h-20 lg:w-20 2xl:h-[102px] 2xl:w-[102px]"
+            href="viber://pa?chatURI=geleonc"
+            target="_blank"
+          >
+            <svg
+              class="h-full w-full object-cover"
+              viewBox="0 0 102 102"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="51" cy="51" r="51" fill="#4D167C" />
+              <path
+                d="M71.0613 62.2512C73.048 63.9282 75.5565 65.3278 74.3683 68.8401C73.1423 72.4976 68.8671 76.1948 65.2206 76.1486C64.7113 76.0033 63.6928 75.8382 62.7812 75.4289C46.7743 68.1865 35.1432 56.3292 28.5354 39.2893C26.3224 33.5785 28.6297 28.759 34.2127 26.785C35.2123 26.4351 36.1994 26.4087 37.1802 26.785C39.563 27.7027 45.5923 36.424 45.7306 39.0318C45.8312 41.0256 44.5361 42.115 43.2535 43.0261C40.8267 44.7558 40.8141 46.9543 41.8515 49.397C44.1903 54.9296 48.1952 58.7323 53.382 61.2015C55.2618 62.0994 57.0599 62.007 58.3425 59.9669C60.631 56.3292 63.435 56.5074 66.5031 58.7653C68.0372 59.9009 69.6027 61.0101 71.0613 62.2446V62.2512ZM53.1117 27.8611C64.8119 29.7493 70.2125 35.5988 71.7088 47.9776C71.8472 49.1198 71.4385 50.8429 72.9914 50.8759C74.6135 50.9089 74.2237 49.2122 74.2362 48.0634C74.3746 36.4042 64.6925 25.5967 53.4449 25.2005C52.6024 25.3326 50.842 24.5865 50.7351 26.5803C50.6597 27.9338 52.1372 27.7093 53.1117 27.8611ZM55.4001 31.2546C54.2748 31.1094 52.791 30.5548 52.5269 32.1987C52.2503 33.9152 53.9101 33.7502 54.9726 33.9944C62.2028 35.6912 64.7176 38.4508 65.9059 45.9838C66.0819 47.0797 65.7361 48.7897 67.5154 48.5058C68.8294 48.2945 68.3578 46.8354 68.4647 45.9772C68.5276 38.7479 62.624 32.1723 55.4001 31.2546ZM56.0666 37.1701C55.3184 37.1899 54.5765 37.2757 54.2999 38.1141C53.885 39.3751 54.7589 39.6722 55.6453 39.8241C58.6129 40.3258 60.172 42.1612 60.4675 45.2641C60.543 46.1092 61.0585 46.7892 61.8318 46.6968C62.9069 46.5582 63.0012 45.5546 62.9698 44.6039C63.0264 41.118 59.273 37.0842 56.0666 37.1701Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer ===================================================================================== -->
+    <footer class="mx-auto px-4 4xl:max-w-[1842px]">footer</footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
