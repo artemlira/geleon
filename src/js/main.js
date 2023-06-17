@@ -12,10 +12,26 @@ burger.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1024) {
-     menu.classList.add('hidden');
-  menu.classList.remove('block');
-  burger.classList.remove('active');
-  body.classList.remove('overflow-hidden');
+    menu.classList.add('hidden');
+    menu.classList.remove('block');
+    burger.classList.remove('active');
+    body.classList.remove('overflow-hidden');
   }
 });
 toggleMenu();
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 80,
+  speed: 1000,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // autoplay: {
+  //   delay: 1800,
+  // }
+});

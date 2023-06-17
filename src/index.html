@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/src/assets/logo.svg" />
+    <link rel="stylesheet" href="./css/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/output.css" />
     <title>Geleon</title>
   </head>
@@ -140,7 +141,7 @@
           <li>
             <a
               class="cursor-pointer text-base hover:text-lightBlue md:text-lg xl:text-xl 2xl:text-[23px]"
-              href="#guarantees"
+              href="#benefits"
               >Преимущества</a
             >
           </li>
@@ -189,7 +190,7 @@
       >
         <ul class="flex flex-col items-center justify-center gap-[15px] py-[15px]">
           <li>
-            <a class="hover:text-lightBlue" href="#guarantees">Преимущества</a>
+            <a class="hover:text-lightBlue" href="#benefits">Преимущества</a>
           </li>
           <li>
             <a class="hover:text-lightBlue" href="#products">Товары</a>
@@ -406,9 +407,9 @@
         </div>
       </section>
 
-      <!-- section guarantees ====================================================================== -->
+      <!-- section benefits ====================================================================== -->
       <section
-        id="guarantees"
+        id="benefits"
         class="section-inline-padding pb-[32px] pt-[22px] lg:pb-[70px] lg:pt-[80px] 2xl:pb-[117px] 2xl:pt-[128px]"
       >
         <h2 class="section-title">
@@ -922,7 +923,7 @@
 
         <!-- schema items ========================================================================== -->
         <div
-          class="mb-[31px] grid grid-cols-1 grid-rows-1 items-center gap-[31px] md:grid-cols-2 md:grid-rows-2 md:gap-[43px] lg:mb-[59px] 2xl:grid-cols-4"
+          class="mb-[31px] grid grid-cols-1 grid-rows-1 items-center gap-[31px] md:grid-cols-2 md:grid-rows-2 md:gap-[43px] lg:mb-[59px] 2xl:grid-cols-4 2xl:grid-rows-1"
         >
           <!-- schema item 1======================================================================== -->
           <div
@@ -1025,7 +1026,31 @@
         <h2 class="section-title mb-[23px] lg:mb-[61px]">
           <span class="font-bold">ОТЗЫВЫ</span> НАШИХ КЛИЕНТОВ
         </h2>
-        <div></div>
+        <div class="h-[215px] sm:h-[512px] lg:h-[823px]">  
+           
+          <div class="swiper flex w-full h-full px-14">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide flex">
+     <iframe class="w-full h-full object-cover object-center" src="https://www.youtube.com/embed/xnOrp3hBed4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="swiper-slide flex">
+      <iframe class="w-full h-full object-cover object-center" src="https://www.youtube.com/embed/Py8uvlaObVg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="swiper-slide flex">
+      <iframe class="w-full h-full object-cover object-center" src="https://www.youtube.com/embed/5PaxpDER0Gw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+
+        </div>        
+        </div>
       </section>
 
       <!-- section GUARANTEE ======================================================================= -->
@@ -1044,7 +1069,7 @@
         </p>
 
         <!-- GUARANTEE items ======================================================================= -->
-        <div class="grid gap-9 md:gap-11 lg:gap-[65px] grid-cols-1 items-center justify-center grid-rows-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3">
+        <div class="grid gap-9 md:gap-11 lg:gap-[65px] grid-cols-1 items-center justify-center grid-rows-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
           <!-- GUARANTEE item 1=================================================================== -->
           <div
             class="flex h-full flex-col items-center justify-center gap-y-[26px] border-[1px] border-black px-[35px] py-[25px] shadow-schema-shadow"
@@ -1160,6 +1185,7 @@
 
     <!-- footer ==================================================================================== -->
     <footer class="mx-auto px-4 4xl:max-w-[1842px]">footer</footer>
+    <script src="./js/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
