@@ -40,3 +40,12 @@
       url('/src/fonts/Montserrat-Bold.woff') format('woff');
   }
 }
+
+@layer components {
+  .section-title {
+    @apply font-zona text-[22px] font-medium uppercase leading-[26px] text-darkBlue lg:text-[50px] lg:leading-[73px] 2xl:text-[70px] 2xl:leading-[83px];
+  }
+  .section-inline-padding {
+    @apply lg:px-10 2xl:px-[96px];
+  }
+}

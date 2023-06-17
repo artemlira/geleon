@@ -17,6 +17,7 @@ module.exports = {
       },
       boxShadow: {
         'round': '13px 16px 8px rgba(0, 0, 0, 0.01), 7px 9px 7px rgba(0, 0, 0, 0.05), 3px 4px 5px rgba(0, 0, 0, 0.09), 1px 1px 3px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+        'schema-shadow': '26px 23px 38px 11px rgba(0, 0, 0, 0.25)'
       },
       screens: {
         sm: '480px',
