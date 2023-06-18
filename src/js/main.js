@@ -2,33 +2,35 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   // Burger menu
-  function toggleMenu() {}
-  const burger = document.querySelector('#burger');
-  const menu = document.querySelector('#mobile-menu');
-  const body = document.querySelector('body');
+  function toggleMenu() {
+    const burger = document.querySelector('#burger');
+    const menu = document.querySelector('#mobile-menu');
+    const body = document.querySelector('body');
 
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    menu.classList.toggle('hidden');
-    menu.classList.toggle('block');
-    body.classList.toggle('overflow-hidden');
-  });
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('block');
+      body.classList.toggle('overflow-hidden');
+    });
 
-  menu.addEventListener('click', () => {
-    menu.classList.add('hidden');
-    menu.classList.remove('block');
-    burger.classList.remove('active');
-    body.classList.remove('overflow-hidden');
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 1024) {
+    menu.addEventListener('click', () => {
       menu.classList.add('hidden');
       menu.classList.remove('block');
       burger.classList.remove('active');
       body.classList.remove('overflow-hidden');
-    }
-  });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) {
+        menu.classList.add('hidden');
+        menu.classList.remove('block');
+        burger.classList.remove('active');
+        body.classList.remove('overflow-hidden');
+      }
+    });
+  }
+
   toggleMenu();
 
   // Swiper slider
@@ -48,21 +50,29 @@ document.addEventListener('DOMContentLoaded', function () {
     // }
   });
 
-  // send form
-  // const firstForm = document.querySelector('#call-form');
-  // const secondForm = document.querySelector('#form');
+  // send message
+  function sendMail(userName, userPhone) {
+    let params = {
+      name: userName.value,
+      phone: userPhone.value,
+    };
+    const serviceID = 'service_kumsi17';
+    const templateID = 'template_95uynfw';
 
-  // firstForm.addEventListener('submit', firstFormSend);
-  // secondForm.addEventListener('submit', secondFormSend);
+    emailjs
+      .send(serviceID, templateID, params)
+      .then((res) => {
+        alert(`${userName.value}, Ваше сообщение отправлено успешно!`);
+        userName.value = '';
+        userPhone.value = '';
+      })
+      .catch((err) => console.log(err));
+  }
 
-  // async function secondFormSend(e) {
-  //   e.preventDefault();
-  //   let secondFormData = new FormData(secondForm);
-  //   let response = await fetch('sendmail.php', {
-  //     method: 'POST',
-  //     body: firstFormData,
-  //   });
-  // }
+  const firstName = document.querySelector('#call-name');
+  const firstPhone = document.querySelector('#call-phone');
+  const secondName = document.querySelector('#name');
+  const secondPhone = document.querySelector('#phone');
 
   // form validation
   let validation = new JustValidate('#call-form');
@@ -87,27 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ])
     .onSuccess(function () {
-      const firstForm = document.querySelector('#call-form');
-
-      firstForm.addEventListener('submit', firstFormSend);
-
-      async function firstFormSend(e) {
-        e.preventDefault();
-        let firstFormData = new FormData(firstForm);
-
-        let response = await fetch('sendmail.php', {
-          method: 'POST',
-          body: firstFormData,
-        });
-
-        if (response.ok) {
-          let result = await response.json();
-          alert(result.message);
-          firstForm.reset();
-        } else {
-          alert('Ошибка!');
-        }
-      }
+      sendMail(firstName, firstPhone);
     });
 
   secondValidation
@@ -129,26 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ])
     .onSuccess(function () {
-      const secondForm = document.querySelector('#form');
-
-      secondForm.addEventListener('submit', secondFormSend);
-
-      async function secondFormSend(e) {
-        e.preventDefault();
-        let secondFormData = new FormData(secondForm);
-
-        let response = await fetch('sendmail.php', {
-          method: 'POST',
-          body: secondFormData,
-        });
-
-        if (response.ok) {
-          let result = await response.json();
-          alert(result.message);
-          secondForm.reset();
-        } else {
-          alert('Ошибка!');
-        }
-      }
+      sendMail(secondName, secondPhone);
     });
 });
