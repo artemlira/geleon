@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/src/assets/logo.svg" />
+    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
     <link rel="stylesheet" href="./css/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/output.css" />
     <title>Geleon</title>
   </head>
   <body class="font-montserrat font-medium">
-    
+
     <!-- header ====================================================================================-->
     <header
       class="mx-auto flex min-h-[46px] items-center justify-between gap-4 px-4 py-2 lg:min-h-[138px] 4xl:max-w-[1842px]"
@@ -664,7 +664,7 @@
 
         <!-- form ==================================================================================-->
         <form
-          action="/"
+          id="call-form"
           class="mx-auto w-full bg-[#2B2F2F] px-[16px] py-[25px] md:h-[573px] md:w-[750px] lg:absolute lg:left-[60%] lg:top-1/2 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:pb-[108px] lg:pl-[104px] lg:pr-[64px] lg:pt-[100px]"
         >
           <!-- form title ============================================================================ -->
@@ -686,7 +686,7 @@
               class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="text"
               name="name"
-              id="name"
+              id="call-name"
               placeholder="Ваше имя"
             />
 
@@ -694,7 +694,7 @@
               class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="tel"
               name="phone"
-              id="phone"
+              id="call-phone"
               placeholder="Телефон"
             />
           </div>
@@ -1313,9 +1313,9 @@
     </main>
 
     <!-- footer ==================================================================================== -->
-    <footer class="mx-auto mb-[37px] bg-[#F0F0F0] px-4 sm:mb-0 4xl:max-w-[1842px]">
+    <footer class="mx-auto mb-[37px] px-4 sm:mb-0 4xl:max-w-[1842px]">
       <section
-        class="section-inline-padding flex flex-col items-center justify-between gap-8 pb-[32px] pt-[27px] md:flex-row lg:pb-[90px] lg:pt-[70px]"
+        class="section-inline-padding bg-[#F0F0F0] flex flex-col items-center justify-between gap-8 pb-[32px] pt-[27px] md:flex-row lg:pb-[90px] lg:pt-[70px]"
       >
         <!-- footer logo ============================================================================= -->
         <div class="h-[110px] w-[134px] lg:h-[134px] lg:w-[168px] 2xl:h-[168px] 2xl:w-[205px]">
@@ -1496,6 +1496,6 @@
       </section>
     </footer>
     <script src="./js/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
