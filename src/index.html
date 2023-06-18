@@ -9,7 +9,6 @@
     <title>Geleon</title>
   </head>
   <body class="font-montserrat font-medium">
-
     <!-- header ====================================================================================-->
     <header
       class="mx-auto flex min-h-[46px] items-center justify-between gap-4 px-4 py-2 lg:min-h-[138px] 4xl:max-w-[1842px]"
@@ -288,7 +287,6 @@
 
     <!-- main ====================================================================================== -->
     <main class="mx-auto px-4 4xl:max-w-[1842px]">
-
       <!--section hero ============================================================================= -->
       <section
         class="bg-[#555555] bg-[url('../assets/heroBG.jpg')] bg-cover bg-center bg-no-repeat px-2 py-[55px] bg-blend-multiply lg:px-10 lg:py-[100px] 2xl:px-[96px] 2xl:py-[296px]"
@@ -664,8 +662,9 @@
 
         <!-- form ==================================================================================-->
         <form
+          action="#"
           id="call-form"
-          class="mx-auto w-full bg-[#2B2F2F] px-[16px] py-[25px] md:h-[573px] md:w-[750px] lg:absolute lg:left-[60%] lg:top-1/2 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:pb-[108px] lg:pl-[104px] lg:pr-[64px] lg:pt-[100px]"
+          class="mx-auto h-auto w-full bg-[#2B2F2F] px-[16px] py-[25px] md:w-[750px] lg:absolute lg:left-[60%] lg:top-1/2 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:pb-[108px] lg:pl-[104px] lg:pr-[64px] lg:pt-[100px]"
         >
           <!-- form title ============================================================================ -->
           <h3
@@ -1066,10 +1065,8 @@
         </h2>
         <div class="h-[215px] sm:h-[512px] lg:h-[823px]">
           <div class="swiper flex h-full w-full px-14">
-
-              <!-- Slides ==========================================================================-->
+            <!-- Slides ==========================================================================-->
             <div class="swiper-wrapper">
-
               <!-- slide 1 ========================================================================= -->
               <div class="swiper-slide flex">
                 <iframe
@@ -1254,7 +1251,8 @@
 
         <!-- CONSULTATION Form ===================================================================== -->
         <form
-          action="/"
+          action="#"
+          id="form"
           class="mx-auto h-auto w-full bg-[#2B2F2F] px-[26px] pb-10 pt-[35px] md:max-w-[750px] lg:max-w-[1018px] lg:px-[85px] lg:pb-[76px] lg:pt-[87px]"
         >
           <!-- form title ============================================================================ -->
@@ -1315,7 +1313,7 @@
     <!-- footer ==================================================================================== -->
     <footer class="mx-auto mb-[37px] px-4 sm:mb-0 4xl:max-w-[1842px]">
       <section
-        class="section-inline-padding bg-[#F0F0F0] flex flex-col items-center justify-between gap-8 pb-[32px] pt-[27px] md:flex-row lg:pb-[90px] lg:pt-[70px]"
+        class="section-inline-padding flex flex-col items-center justify-between gap-8 bg-[#F0F0F0] pb-[32px] pt-[27px] md:flex-row lg:pb-[90px] lg:pt-[70px]"
       >
         <!-- footer logo ============================================================================= -->
         <div class="h-[110px] w-[134px] lg:h-[134px] lg:w-[168px] 2xl:h-[168px] 2xl:w-[205px]">
@@ -1495,6 +1493,7 @@
         </div>
       </section>
     </footer>
+    <script src="./js/unpkg.com_just-validate@4.2.0_dist_just-validate.production.min.js"></script>
     <script src="./js/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>
   </body>
