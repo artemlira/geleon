@@ -992,12 +992,12 @@ video {
   justify-content: space-around;
 }
 
-.gap-10 {
-  gap: 2.5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-4 {
@@ -1030,10 +1030,6 @@ video {
 
 .gap-\[31px\] {
   gap: 31px;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .gap-y-9 {
@@ -1074,6 +1070,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-2 {
