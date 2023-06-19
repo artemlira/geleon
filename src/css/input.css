@@ -43,9 +43,29 @@
 
 @layer components {
   .section-title {
-    @apply font-zona text-[22px] font-medium uppercase leading-[26px] text-darkBlue lg:text-[50px] lg:leading-[73px] 2xl:text-[70px] 2xl:leading-[83px];
+    @apply font-zona text-[22px] font-medium uppercase leading-[26px] text-darkBlue lg:text-4xl 3xl:text-[50px] 3xl:leading-[73px] 4xl:text-[70px] 4xl:leading-[83px];
   }
   .section-inline-padding {
     @apply lg:px-10 2xl:px-[96px];
+  }
+
+  .section-text-35 {
+    @apply text-base leading-5 lg:text-lg 2xl:text-xl 3xl:text-[35px] 3xl:leading-[43px];
+  }
+
+  .product-img {
+    @apply h-[241px] w-[248px] shrink-0 2xl:h-[396px] 2xl:w-[385px];
+  }
+
+  .product-title {
+    @apply font-zona text-[22px] font-bold uppercase leading-[26px] lg:text-3xl 2xl:text-[35px] 2xl:leading-[42px];
+  }
+
+  .product-text {
+    @apply mb-[9px] font-zona text-[22px] uppercase leading-[26px] lg:mb-[39px] lg:text-3xl 2xl:text-[35px] 2xl:leading-[42px];
+  }
+
+  .product-list {
+    @apply list-disc font-zona leading-[18px] 2xl:text-[25px] 2xl:leading-[30px];
   }
 }
