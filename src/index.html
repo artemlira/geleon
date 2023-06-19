@@ -666,7 +666,9 @@
         ></div>
 
         <!-- background grey =======================================================================-->
-        <div class="3xl:mb-[81px] xl:mb-[4vw]  xl:mt-[5vw] 3xl:mt-[96px] hidden w-2/5 bg-[#F0F0F0] lg:block"></div>
+        <div
+          class="hidden w-2/5 bg-[#F0F0F0] lg:block xl:mb-[4vw] xl:mt-[5vw] 3xl:mb-[81px] 3xl:mt-[96px]"
+        ></div>
 
         <!-- form ==================================================================================-->
         <form
@@ -692,7 +694,7 @@
             <input
               class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="text"
-              name="name"
+              name="InputNameField"
               id="call-name"
               placeholder="Ваше имя"
             />
@@ -700,7 +702,7 @@
             <input
               class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="tel"
-              name="phone"
+              name="InputPhoneField"
               id="call-phone"
               placeholder="Телефон"
             />
@@ -714,6 +716,8 @@
             Напишите нам
           </button>
         </form>
+        <div id="success-message" class="hidden fixed top-[50%] left-[50%]"><img src="./assets/thanks.png" alt="success-message"></div>
+        <div id="error-message" class="hidden fixed top-[50%] left-[50%]"><img src="./assets/ne-otpravleno.svg" alt="error-message"></div>
       </section>
 
       <!-- section Products ======================================================================== -->

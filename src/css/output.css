@@ -796,11 +796,19 @@ video {
   left: 0px;
 }
 
+.left-\[50\%\] {
+  left: 50%;
+}
+
 .top-0 {
   top: 0px;
 }
 
 .top-1\/2 {
+  top: 50%;
+}
+
+.top-\[50\%\] {
   top: 50%;
 }
 
@@ -2278,11 +2286,6 @@ video {
 
   .\33xl\:p-\[22px\] {
     padding: 22px;
-  }
-
-  .\33xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .\33xl\:px-\[106px\] {

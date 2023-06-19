@@ -51,25 +51,55 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // send message
-  function sendMail(userName, userPhone) {
-    let params = {
-      name: userName.value,
-      phone: userPhone.value,
+
+  const firstName = document.querySelector('#call-form');
+  const successMessage = document.querySelector('#success-message');
+  const errorMessage = document.querySelector('#error-message');
+
+  firstName.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log(firstName);
+    const formData = new FormData(firstName);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '../application.php', true);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        // Обработка успешной отправки формы
+        console.log(xhr.responseText);
+        form.reset(); // Сброс формы после успешной отправки
+        // Вывод сообщения об успешной отправке
+        successMessage.textContent = 'Спасибо! Ваша заявка успешно отправлена.';
+        successMessage.classList.add('block');
+        setTimeout(function () {
+          successMessage.classList.add('hidden');
+        }, 3000);
+      } else {
+        // Обработка ошибки при отправке формы
+        console.error(xhr.statusText);
+        // Вывод сообщения об ошибке
+        errorMessage.textContent =
+          'Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.';
+        errorMessage.classList.add('block');
+        setTimeout(function () {
+          errorMessage.classList.add('hidden');
+        }, 3000);
+      }
     };
-    const serviceID = 'service_kumsi17';
-    const templateID = 'template_95uynfw';
+    xhr.onerror = function () {
+      // Обработка ошибки при отправке формы
+      console.error(xhr.statusText);
+      // Вывод сообщения об ошибке
+      errorMessage.textContent =
+        'Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.';
+      errorMessage.classList.add('block');
+      setTimeout(function () {
+        errorMessage.classList.add('hidden');
+      }, 3000);
+    };
+    xhr.send(formData);
+  });
 
-    emailjs
-      .send(serviceID, templateID, params)
-      .then((res) => {
-        alert(`${userName.value}, Ваше сообщение отправлено успешно!`);
-        userName.value = '';
-        userPhone.value = '';
-      })
-      .catch((err) => console.log(err));
-  }
-
-  const firstName = document.querySelector('#call-name');
   const firstPhone = document.querySelector('#call-phone');
   const secondName = document.querySelector('#name');
   const secondPhone = document.querySelector('#phone');
@@ -97,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ])
     .onSuccess(function () {
-      sendMail(firstName, firstPhone);
+      // sendMail(firstName, firstPhone);
     });
 
   secondValidation
@@ -119,6 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ])
     .onSuccess(function () {
-      sendMail(secondName, secondPhone);
+      // sendMail(secondName, secondPhone);
     });
 });
