@@ -427,8 +427,8 @@ video {
 
   font-weight: 400;
 
-  src: url('/src/fonts/ZonaPro-Regular.woff2') format('woff2'),
-      url('/src/fonts/ZonaPro-Regular.woff') format('woff');
+  src: url('../fonts/ZonaPro-Regular.woff2') format('woff2'),
+      url('../fonts/ZonaPro-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -436,8 +436,8 @@ video {
 
   font-weight: 700;
 
-  src: url('/src/fonts/ZonaPro-Bold.woff2') format('woff2'),
-      url('/src/fonts/ZonaPro-Bold.woff') format('woff');
+  src: url('../fonts/ZonaPro-Bold.woff2') format('woff2'),
+      url('../fonts/ZonaPro-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -445,8 +445,8 @@ video {
 
   font-weight: 400;
 
-  src: url('/src/fonts/Montserrat-Regular.woff2') format('woff2'),
-      url('/src/fonts/Montserrat-Regular.woff') format('woff');
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+      url('../fonts/Montserrat-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -454,8 +454,8 @@ video {
 
   font-weight: 500;
 
-  src: url('/src/fonts/Montserrat-Medium.woff2') format('woff2'),
-      url('/src/fonts/Montserrat-Medium.woff') format('woff');
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+      url('../fonts/Montserrat-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -463,8 +463,8 @@ video {
 
   font-weight: 600;
 
-  src: url('/src/fonts/Montserrat-SemiBold.woff2') format('woff2'),
-      url('/src/fonts/Montserrat-SemiBold.woff') format('woff');
+  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+      url('../fonts/Montserrat-SemiBold.woff') format('woff');
 }
 
 @font-face {
@@ -472,8 +472,8 @@ video {
 
   font-weight: 700;
 
-  src: url('/src/fonts/Montserrat-Bold.woff2') format('woff2'),
-      url('/src/fonts/Montserrat-Bold.woff') format('woff');
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+      url('../fonts/Montserrat-Bold.woff') format('woff');
 }
 
 *, ::before, ::after {
@@ -764,6 +764,28 @@ video {
   }
 }
 
+.status {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  background-color: rgba(240,240,240,0.97);
+}
+
+.image {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .visible {
   visibility: visible;
 }
@@ -796,19 +818,11 @@ video {
   left: 0px;
 }
 
-.left-\[50\%\] {
-  left: 50%;
-}
-
 .top-0 {
   top: 0px;
 }
 
 .top-1\/2 {
-  top: 50%;
-}
-
-.top-\[50\%\] {
   top: 50%;
 }
 
@@ -1477,6 +1491,10 @@ video {
   line-height: 26px;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
 .text-darkGray {
   --tw-text-opacity: 1;
   color: rgb(64 64 64 / var(--tw-text-opacity));
@@ -1867,10 +1885,6 @@ video {
     display: flex;
   }
 
-  .lg\:hidden {
-    display: none;
-  }
-
   .lg\:h-20 {
     height: 5rem;
   }
@@ -2031,10 +2045,6 @@ video {
     padding-bottom: 91px;
   }
 
-  .lg\:pt-\[138px\] {
-    padding-top: 138px;
-  }
-
   .lg\:pt-\[30px\] {
     padding-top: 30px;
   }
@@ -2090,6 +2100,14 @@ video {
     margin-top: 5vw;
   }
 
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:h-\[97px\] {
     height: 97px;
   }
@@ -2131,6 +2149,10 @@ video {
   .xl\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .xl\:pt-\[138px\] {
+    padding-top: 138px;
   }
 
   .xl\:text-\[21px\] {
@@ -2225,6 +2247,11 @@ video {
 
   .\32xl\:text-\[37px\] {
     font-size: 37px;
+  }
+
+  .\32xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .\32xl\:text-xl {
@@ -2372,5 +2399,9 @@ video {
 @media (min-width: 1664px) {
   .\34xl\:max-w-\[1842px\] {
     max-width: 1842px;
+  }
+
+  .\34xl\:text-\[23px\] {
+    font-size: 23px;
   }
 }

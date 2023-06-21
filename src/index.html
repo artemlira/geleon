@@ -17,9 +17,9 @@
       })();
     </script>
   </head>
-  <body class="font-montserrat font-medium">
+  <body class="relative font-montserrat font-medium">
     <!-- header ====================================================================================-->
-    <header class="sticky left-0 top-0 z-20 w-full shadow-md ring-0 lg:px-[7vw]">
+    <header class="sticky left-0 top-0 z-20 w-full bg-white shadow-md ring-0 lg:px-[7vw]">
       <section
         class="container mx-auto flex min-h-[46px] items-center justify-between gap-4 bg-white px-4 py-2 lg:min-h-[110px] 2xl:h-[138px] 4xl:max-w-[1842px]"
       >
@@ -145,48 +145,48 @@
         </a>
 
         <!-- menu PC ================================================================================= -->
-        <nav class="hidden lg:block">
+        <nav class="hidden xl:block">
           <ul
             class="hidden flex-wrap justify-center space-x-4 lg:flex xl:flex-nowrap 3xl:space-x-9"
           >
             <li>
               <a
-                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-xl 3xl:text-[23px]"
+                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-lg 4xl:text-[23px]"
                 href="#benefits"
                 >Преимущества</a
               >
             </li>
             <li>
               <a
-                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-xl 3xl:text-[23px]"
+                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-lg 4xl:text-[23px]"
                 href="#products"
                 >Товары</a
               >
             </li>
             <li>
               <a
-                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-xl 3xl:text-[23px]"
+                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-lg 4xl:text-[23px]"
                 href="#call_us"
                 >Позвоните нам</a
               >
             </li>
             <li>
               <a
-                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-xl 3xl:text-[23px]"
+                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-lg 4xl:text-[23px]"
                 href="#shcema"
                 >Схема работы</a
               >
             </li>
             <li>
               <a
-                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-xl 3xl:text-[23px]"
+                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-lg 4xl:text-[23px]"
                 href="#reviews"
                 >Отзывы</a
               >
             </li>
             <li>
               <a
-                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-xl 3xl:text-[23px]"
+                class="cursor-pointer text-base hover:text-lightBlue 2xl:text-lg 4xl:text-[23px]"
                 href="#guarantees"
                 >Гарантии</a
               >
@@ -197,7 +197,7 @@
         <!-- menu mobile ============================================================================= -->
         <nav
           id="mobile-menu"
-          class="fixed left-0 top-0 hidden h-auto w-full animate-fadeIn border-2 bg-white pt-10 transition-transform lg:pt-[138px]"
+          class="fixed left-0 top-0 hidden h-auto w-full animate-fadeIn border-2 bg-white pt-10 transition-transform xl:pt-[138px]"
         >
           <ul class="flex flex-col items-center justify-center gap-[15px] py-[15px]">
             <li>
@@ -283,7 +283,7 @@
         </div>
 
         <!-- burger menu ============================================================================= -->
-        <div id="burger" class="group relative h-[44px] w-[44px] cursor-pointer lg:hidden">
+        <div id="burger" class="group relative h-[44px] w-[44px] cursor-pointer xl:hidden">
           <span
             class="absolute left-0 top-0 block h-2 w-full rounded-lg bg-black transition-transform group-[.active]:translate-y-[15px] group-[.active]:rotate-45"
           ></span>
@@ -376,7 +376,6 @@
           </a>
         </div>
       </section>
-
       <!-- section brands ==========================================================================-->
       <section
         class="grid min-h-[234px] grid-cols-3 items-center justify-around gap-5 md:px-10 lg:grid-cols-6 lg:grid-rows-1 lg:bg-[#f0f0f0] xl:px-[122px]"
@@ -692,19 +691,21 @@
           <!-- form inputs========================================================================== -->
           <div class="flex flex-col gap-5">
             <input
-              class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
+              class="name border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="text"
               name="InputNameField"
               id="call-name"
               placeholder="Ваше имя"
+              required
             />
 
             <input
-              class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
+              class="phone border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="tel"
               name="InputPhoneField"
               id="call-phone"
               placeholder="Телефон"
+              required
             />
           </div>
 
@@ -716,8 +717,6 @@
             Напишите нам
           </button>
         </form>
-        <div id="success-message" class="hidden fixed top-[50%] left-[50%]"><img src="./assets/thanks.png" alt="success-message"></div>
-        <div id="error-message" class="hidden fixed top-[50%] left-[50%]"><img src="./assets/ne-otpravleno.svg" alt="error-message"></div>
       </section>
 
       <!-- section Products ======================================================================== -->
@@ -904,7 +903,7 @@
         </h2>
 
         <!-- schema text =========================================================================== -->
-        <p class="section-text-35 mb-[15px] leading-[20px] lg:mb-[52px]">
+        <p class="section-text-35 mb-[15px] leading-normal lg:mb-[52px]">
           Индивидуальный подход к каждому шиномонтажу: забота о безопасности и комфорте клиента -
           основа нашей работы.
         </p>
@@ -1074,7 +1073,7 @@
         </h2>
 
         <!-- GUARANTEE text ======================================================================== -->
-        <p class="section-text-35 mb-9 leading-[20px] lg:mb-[77px]">
+        <p class="section-text-35 mb-9 leading-normal lg:mb-[77px]">
           Наши клиенты получают тройную гарантию на следуюзщие при заказе у нас:
         </p>
 
@@ -1223,18 +1222,20 @@
           <!-- form inputs========================================================================== -->
           <div class="flex flex-col gap-5">
             <input
-              class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
+              class="name border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="text"
-              name="name"
+              name="InputNameField"
               id="name"
               placeholder="Ваше имя"
+              required
             />
             <input
-              class="border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
+              class="phone border-b-[1px] border-white bg-transparent py-3 text-white placeholder:text-white focus:outline-[#38C6F4]"
               type="tel"
-              name="phone"
+              name="InputPhoneField"
               id="phone"
               placeholder="Телефон"
+              required
             />
           </div>
 
@@ -1454,6 +1455,16 @@
         </div>
       </section>
     </footer>
+    <div id="success" class="status hidden">
+      <img src="./assets/thanks.png" alt="success-message"/>
+    </div>
+    <div 
+    id="failure" class="status hidden">
+      <img src="./assets/ne-otpravleno.svg" alt="failure-message">
+    </div>
+    <div id="loading" class="status hidden">
+      <img src="./assets/loading.png" alt="loading...">
+    </div>
     <script src="./js/unpkg.com_just-validate@4.2.0_dist_just-validate.production.min.js"></script>
     <script src="./js/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>

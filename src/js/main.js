@@ -52,103 +52,121 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // send message
 
-  const firstName = document.querySelector('#call-form');
-  const successMessage = document.querySelector('#success-message');
-  const errorMessage = document.querySelector('#error-message');
+  const form = document.querySelectorAll('form'),
+    inputs = document.querySelectorAll('input'),
+    success = document.querySelector('#success'),
+    loading = document.querySelector('#loading'),
+    failure = document.querySelector('#failure');
 
-  firstName.addEventListener('submit', function (event) {
-    event.preventDefault();
-    console.log(firstName);
-    const formData = new FormData(firstName);
+  const postData = async (url, data) => {
+    loading.classList.remove('hidden');
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '../application.php', true);
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        // Обработка успешной отправки формы
-        console.log(xhr.responseText);
-        form.reset(); // Сброс формы после успешной отправки
-        // Вывод сообщения об успешной отправке
-        successMessage.textContent = 'Спасибо! Ваша заявка успешно отправлена.';
-        successMessage.classList.add('block');
-        setTimeout(function () {
-          successMessage.classList.add('hidden');
-        }, 3000);
-      } else {
-        // Обработка ошибки при отправке формы
-        console.error(xhr.statusText);
-        // Вывод сообщения об ошибке
-        errorMessage.textContent =
-          'Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.';
-        errorMessage.classList.add('block');
-        setTimeout(function () {
-          errorMessage.classList.add('hidden');
-        }, 3000);
+    let res = await fetch(url, {
+      method: 'POST',
+      body: data,
+    });
+
+    return await res;
+  };
+
+  const clearInputs = () => {
+    inputs.forEach((item) => {
+      item.value = '';
+    });
+  };
+
+  const validation = (form) => {
+    let result = true;
+    const allInputs = form.querySelectorAll('input');
+
+    allInputs.forEach((item) => {
+      console.log(item.value);
+      if (!item.value) {
+        result = false;
       }
-    };
-    xhr.onerror = function () {
-      // Обработка ошибки при отправке формы
-      console.error(xhr.statusText);
-      // Вывод сообщения об ошибке
-      errorMessage.textContent =
-        'Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.';
-      errorMessage.classList.add('block');
-      setTimeout(function () {
-        errorMessage.classList.add('hidden');
-      }, 3000);
-    };
-    xhr.send(formData);
+    });
+
+    return result;
+  };
+
+  form.forEach((item) => {
+    item.addEventListener('submit', (e) => {
+      e.preventDefault();
+      validation(item);
+
+      if (validation(item)) {
+        const formData = new FormData(item);
+
+        postData('../application.php', formData)
+          .then((res) => {
+            console.log(res);
+            loading.classList.add('hidden');
+            success.classList.remove('hidden');
+          })
+          .catch((err) => {
+            console.log(err);
+            loading.classList.add('hidden');
+            failure.classList.remove('hidden');
+          })
+          .finally(() => {
+            clearInputs();
+            setTimeout(() => {
+              loading.classList.add('hidden');
+              success.classList.add('hidden');
+              failure.classList.add('hidden');
+            }, 5000);
+          });
+      }
+    });
   });
 
-  const firstPhone = document.querySelector('#call-phone');
-  const secondName = document.querySelector('#name');
-  const secondPhone = document.querySelector('#phone');
-
   // form validation
-  let validation = new JustValidate('#call-form');
-  let secondValidation = new JustValidate('#form');
+  // let validation = new JustValidate('#call-form');
+  // let secondValidation = new JustValidate('#form');
 
-  validation
-    .addField('#call-name', [
-      {
-        rule: 'required',
-        errorMessage: 'Введите имя',
-      },
-      {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Минимум 2 символа!',
-      },
-    ])
-    .addField('#call-phone', [
-      {
-        rule: 'required',
-        errorMessage: 'Введите телефон!',
-      },
-    ])
-    .onSuccess(function () {
-      // sendMail(firstName, firstPhone);
-    });
+  // validation
+  //   .addField('#call-name', [
+  //     {
+  //       rule: 'required',
+  //       errorMessage: 'Введите имя',
+  //     },
+  //     {
+  //       rule: 'minLength',
+  //       value: 2,
+  //       errorMessage: 'Минимум 2 символа!',
+  //     },
+  //   ])
+  //   .addField('#call-phone', [
+  //     {
+  //       rule: 'required',
+  //       errorMessage: 'Введите телефон!',
+  //     },
+  //   ])
+  //   .onSuccess(function () {
 
-  secondValidation
-    .addField('#name', [
-      {
-        rule: 'required',
-        errorMessage: 'Введите имя',
-      },
-      {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Минимум 2 символа!',
-      },
-    ])
-    .addField('#phone', [
-      {
-        rule: 'required',
-        errorMessage: 'Введите телефон!',
-      },
-    ])
-    .onSuccess(function () {
-      // sendMail(secondName, secondPhone);
-    });
+  //     // sendMail(firstName, firstPhone);
+  //   });
+
+  // secondValidation
+  //   .addField('#name', [
+  //     {
+  //       rule: 'required',
+  //       errorMessage: 'Введите имя',
+  //     },
+  //     {
+  //       rule: 'minLength',
+  //       value: 2,
+  //       errorMessage: 'Минимум 2 символа!',
+  //     },
+  //   ])
+  //   .addField('#phone', [
+  //     {
+  //       rule: 'required',
+  //       errorMessage: 'Введите телефон!',
+  //     },
+  //   ])
+  //   .onSuccess(function () {
+
+  //     // sendMail(firstName, firstPhone);
+  //   });
 });
